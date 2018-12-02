@@ -7,7 +7,7 @@ import util
 class NNEncode():
     # Encode points as a linear combination of unordered points
     # using NN search and RBF kernel
-    def __init__(self, NN, sigma, km_filepath='./data/color_bins/pts_in_hull.npy', cc=-1):
+    def __init__(self, NN, sigma, km_filepath='/shared/foss/interactive-deep-colorization/data/color_bins/pts_in_hull.npy', cc=-1):
         if(util.check_value(cc, -1)):
             self.cc = np.load(km_filepath)
         else:

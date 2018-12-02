@@ -174,7 +174,7 @@ class NNEncLayer(caffe.Layer):
         # self.NN = 10.
         self.NN = 1.
         self.sigma = 5.
-        self.ENC_DIR = './data/color_bins'
+        self.ENC_DIR = '/shared/foss/interactive-deep-colorization/data/color_bins'
         self.nnenc = cq.NNEncode(self.NN, self.sigma, km_filepath=os.path.join(self.ENC_DIR, 'pts_in_hull.npy'))
 
         self.N = bottom[0].data.shape[0]

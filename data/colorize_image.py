@@ -383,7 +383,7 @@ class ColorizeImageCaffe(ColorizeImageBase):
         self.pred_ab_layer = 'pred_ab'  # predicted ab layer
 
         # Load grid properties
-        self.pts_in_hull_path = './data/color_bins/pts_in_hull.npy'
+        self.pts_in_hull_path = '/shared/foss/interactive-deep-colorization/data/color_bins/pts_in_hull.npy'
         self.pts_in_hull = np.load(self.pts_in_hull_path)  # 313x2, in-gamut
 
     # ***** Net preparation *****
@@ -468,8 +468,8 @@ class ColorizeImageCaffeDist(ColorizeImageCaffe):
         self.dist_ab_set = False
         self.scale_S_layer = 'scale_S'
         self.dist_ab_S_layer = 'dist_ab_S'  # softened distribution layer
-        self.pts_grid = np.load('./data/color_bins/pts_grid.npy')  # 529x2, all points
-        self.in_hull = np.load('./data/color_bins/in_hull.npy')  # 529 bool
+        self.pts_grid = np.load('/shared/foss/interactive-deep-colorization/data/color_bins/pts_grid.npy')  # 529x2, all points
+        self.in_hull = np.load('/shared/foss/interactive-deep-colorization/data/color_bins/in_hull.npy')  # 529 bool
         self.AB = self.pts_grid.shape[0]  # 529
         self.A = int(np.sqrt(self.AB))  # 23
         self.B = int(np.sqrt(self.AB))  # 23

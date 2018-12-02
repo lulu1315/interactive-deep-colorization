@@ -1,7 +1,7 @@
 import sys, getopt
 
 if len(sys.argv) != 8:
-    print 'usage : python GlobalHistogramTransfer.py imatocolorize refimage outputimage prototxt caffemodel globalprototxt globalcaffemodel'
+    print ('usage : python GlobalHistogramTransfer.py imatocolorize refimage outputimage prototxt caffemodel globalprototxt globalcaffemodel')
     sys.exit()
     
 import cv2
@@ -32,7 +32,7 @@ globcaffemodel = sys.argv[7]
 #print caffemodel
 #sys.exit()
 
-gpu_id = -1 # gpu to use
+gpu_id = 0 # gpu to use
 Xd = 256
 
 # Colorization network
